@@ -1,36 +1,81 @@
-body {
-  background: $lightBlue;
-}
-
-#board {
-  width: 390px;
-  height: 390px;
-  // border: 5px solid $lightOrange;
-  // background-color: $darkBlue;
-  margin: 20px auto;
+*{
+  margin: 0;
   padding: 0;
+  box-sizing:border-box;
 }
-
-.square {
-  box-sizing: border-box;
-  float: left;
-  // display: inline-block;
-  font-size: 0;
-  line-height: 0;
-  width: 120px;
-  height: 120px;
-  border-radius: 4px;
-  background-color: white;
-  border: 1px solid gainsboro;
-  margin: 5px;
-  font-size: 2em;
-  font-weight: 550;
-  line-height: 100px;
-  text-align: center;
-  cursor: pointer;
-
-  &:hover {
-    background-color: darken(white, 15);
+.container {
+  display: grid;
+  grid-template-columns: 200px auto;
+  grid-template-rows: 1fr;
+  height: 100vh;
+  width: 100%;
+}
+header {
+  background: $lightBlue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 200px;
+  border-right: 1px solid white;
+  .user {
+    height: 100px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    img {
+      border-radius: 50%;
+      height: 60px;
+      margin-top: 15px;
+    }
+    hr {
+      margin-top:15px;
+      width: calc(200px - 40px);
+      border:1px solid white;
+    }
+  }
+  ul {
+    width: 200px;
+    margin-top: 10px;
+    list-style: none;
+    li {
+      width: inherit;
+      display: flex;
+      height: 60px;
+      width: 200px;
+      align-items: flex-end;
+      justify-content: center;
+      text-decoration: none;
+      border-bottom: 2px solid #ccc;
+      a{
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+      }
+    }
+    .active {
+      background-color: $darkBlue;
+    }
   }
 
+}
+.Splash {
+  height: 100vh;
+  width: 100%;
+}
+.storyBoard{
+  padding:15px;
+  background-color:grey;
+}
+.story {
+  width: 100%;
+  height: 150px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 15px;
+  margin-top: 10px;
+  margin-right: 15px;
 }
